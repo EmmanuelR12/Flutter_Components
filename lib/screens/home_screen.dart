@@ -1,4 +1,6 @@
-import 'package:fl_components/screens/screens.dart';
+import 'package:fl_components/models/menu_options.dart';
+import 'package:fl_components/router/app_routes.dart';
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,23 +8,24 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final menuOption = AppRoutes.menuOptions;
     return Scaffold(
         appBar: AppBar(
           title: const Text('Componentes en Flutter'),
-          elevation: 0,
         ),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
-                  leading: const Icon(Icons.access_time_filled_outlined),
-                  title: const Text('Nombre de ruta'),
+                  leading:
+                      Icon(menuOption[index].icon, color: AppTheme.primary),
+                  title: Text(menuOption[index].name),
                   onTap: () {
                     //final route = MaterialPageRoute(
                     //    builder: (context) => Listview1Screen());
                     //Navigator.push(context, route);
-                    Navigator.pushNamed(context, 'listview1');
+                    Navigator.pushNamed(context, menuOption[index].route);
                   },
                 ),
             separatorBuilder: (_, __) => const Divider(),
-            itemCount: 10));
+            itemCount: menuOption.length));
   }
 }
