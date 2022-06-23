@@ -16,7 +16,7 @@ class CardScreen extends StatelessWidget {
             CustomCardType1(),
             SizedBox(height: 10),
             CustomCardType2(
-              imgUrl: 'https://images4.alphacoders.com/936/936378.jpg',
+              imgUrl: 'https://i.pinimg.com/originals/c7/ec/66/c7ec66a39847cd60cd2c810af251dfb9.jpg',
               textImg: 'Otro Mundo',
             ),
             SizedBox(height: 10),
@@ -27,7 +27,7 @@ class CardScreen extends StatelessWidget {
             SizedBox(height: 10),
             CustomCardType2(
               imgUrl:
-                  'https://images7.alphacoders.com/992/thumb-1920-992404.jpg',
+                  'https://images8.alphacoders.com/695/695227.jpg',
               textImg: 'Tranquilidad',
             ),
             SizedBox(height: 40),
